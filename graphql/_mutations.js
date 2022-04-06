@@ -11,5 +11,8 @@ const typeDefs = gql`
       thumbnail_image_url: String
       profile_image_url: String
     ): User
+    kakaoAuth(code: String): Auth
   }
 `;
+
+module.exports = typeDefs;
