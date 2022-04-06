@@ -1,6 +1,6 @@
 const { ApolloServer } = require('apollo-server');
-const typeDefs = require('./graphql/schema');
-const resolvers = require('./graphql/resolvers');
+
+const { typeDefs, resolvers } = require('./graphql');
 const dotenv = require('dotenv');
 const {
   ApolloServerPluginLandingPageGraphQLPlayground,
