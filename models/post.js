@@ -1,28 +1,28 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
-const userSchema = new Schema({
-  author: { type: mongoose.Types.ObjectId, ref: 'User', required: true },
-  email: {
+const postSchema = new Schema({
+  title: {
     type: String,
     required: true,
   },
-  isAdmin: {
-    type: Boolean,
-    required: true,
-    default: false,
-  },
-  nickname: {
+  personnel: {
     type: String,
     required: true,
-  },
-  thumbnail_image_url: {
-    type: String,
-  },
-  profile_image_url: {
-    type: String,
   },
   phoneNumber: {
+    type: String,
+    required: true,
+  },
+  event: {
+    type: String,
+    required: true,
+  },
+  region: {
+    type: String,
+    required: true,
+  },
+  content: {
     type: String,
     required: true,
   },
@@ -33,4 +33,4 @@ const userSchema = new Schema({
   },
 });
 
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model('Post', postSchema);
